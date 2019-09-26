@@ -1,0 +1,47 @@
+:host {
+    .rotate {
+        transition: transform 300ms 500ms;
+    }
+    .img-loaded .rotate {
+        transform: rotate(-5deg);
+    }
+    .overflow-hidden {
+        overflow: hidden;
+    }
+    .icon-img{
+      height: 154px;
+      width: 154px;
+      opacity: 1 !important;
+    }
+    .card-icon {
+      text-align: center;
+    }
+    .card-icon .mat-icon {
+        font-size: 100px;
+    }
+    .card-title-header {
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+        ::ng-deep .mat-card-header-text {
+            width: 100% !important;
+        }
+    }
+    .card-box {
+        cursor: pointer;
+        box-shadow: 0px 1px 1px 1px #f1f1f1;
+        background: #fff;
+        // max-width: 320px;
+        // min-width: 320px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+    .cardLink-titlte{
+      min-height: 60px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border-top: 1px solid #f1f1f1;
+      font-size: larger;
+      font-weight: 200;
+    }
+}

@@ -1,0 +1,8 @@
+<ng-container class="app-container" *ngIf="!exit; else exitTemp">
+    <router-outlet></router-outlet>
+</ng-container>
+<ng-template #exitTemp>
+    <div class="d-flex align-items-center justify-content-center h-100">
+        <h1>Good Bye !!</h1>
+    </div>
+</ng-template>

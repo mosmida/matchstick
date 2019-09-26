@@ -1,0 +1,23 @@
+<!--component html goes here -->
+<div class="contanier desk-container p-5">
+    <div class="row">
+        <div class="col-12">
+            <ng-container *ngIf="!endGame; else result">
+                <h2 class="text-center p-3">Celui qui prend la dernière allumette gagne la partie ! - reste {{matchesList.length}}</h2>
+                <matches-row class="d-flex align-items-center justify-content-center" [matches]="matchesList"></matches-row>
+                <h4 class="text-center p-4">Combien prenez-vous d'allumettes ?</h4>
+                <choices-pad class="d-flex align-items-center justify-content-center" [max]="settings.maxChoice"
+                    (choiceSelect)="onChoiceSelect($event)"></choices-pad>
+
+            </ng-container>
+
+        </div>
+    </div>
+</div>
+
+<ng-template #result>
+    <div class="d-flex align-items-center flex-column justify-content-center h-100">
+            <h1>Fin de partie - {{currentPlayer}} gange !</h1>
+            <button mat-raised-button (click)="initGame()">Rejouer</button>
+        </div>
+</ng-template>

@@ -1,0 +1,11 @@
+<mat-card class="card-box p-0 mat-elevation-z0">
+  <div mat-card-icon *ngIf="icon" class="card-icon p-4">
+    <mat-icon [inline]="true" class="pt-4">{{icon}}</mat-icon>
+  </div>
+  <div *ngIf="img" class="card-img d-flex flex-row justify-content-center">
+      <img class="p-4 icon-img" style="opacity: 0.4;" src="{{img}}" alt="icon">
+  </div>
+  <div class="cardLink-titlte w-100 text-center">
+    {{title}}
+  </div>
+</mat-card>
